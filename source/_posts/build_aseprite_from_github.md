@@ -1,6 +1,7 @@
 ---
 title: Aseprite 白嫖编译指南
 date: 2022-06-22 14:46:00
+updated: 2022-07-07 13:09:00
 tags: 
 - Aseprite
 - PixelArt
@@ -39,7 +40,31 @@ tags:
 
 - 由于一些国情原因GitHub访问速度一直不太稳定Git经常链接断断续续，外加不是所有人都会用Git。这里推荐下载Release版。至于速度问题网上有很多解决方案如油猴插件之类的个人一直使用serctl的加速。
 
-- 下载完解压，这里以解压到`D:\Aseprite`为例。可以在根目录找到[INSTALL.md](https://github.com/aseprite/aseprite/blob/main/INSTALL.md)，这个文件是官方推荐的安装教程（只是写的过于专业，程序员可能比较容易理解，对小白不太友好）。
+- 下载完解压，这里以解压到`D:\Aseprite`，这里以`Aseprite-v1.3-beta16-Source.zip`为例解压后根目录结构如下。
+
+```tree
+D:\Aseprite
+├─.github
+├─cmake
+├─data
+├─docs
+├─laf
+├─src
+├─third_party
+├─.clang-format
+├─.clang-tidy
+├─.gitignore
+├─.gitmodules
+├─CMakeLists.txt
+├─CODE_OF_CONDUCT.md
+├─CODEOWNERS
+├─CONTRIBUTING.md
+├─EULA.txt
+├─INSTALL.md
+└─README.md
+```
+
+- 在根目录找到[INSTALL.md](https://github.com/aseprite/aseprite/blob/main/INSTALL.md)，这个文件是官方推荐的安装教程（只是写的过于专业，程序员可能比较容易理解，对小白不太友好）。
 
 - 其中对编译准备阶段比较重要的就是这段
 ```markdown
@@ -77,6 +102,14 @@ To compile Aseprite you will need:
 
 - 安装目录没啥要求这里以`D:\Program Files\CMake`为例
 
+```tree
+D:\Program Files\CMake
+├─bin
+├─doc
+├─man
+└─share
+```
+
 ### 1.2 Ninja ###
 
 - 官网：[https://ninja-build.org/](https://ninja-build.org/)
@@ -85,6 +118,11 @@ To compile Aseprite you will need:
 
 - 下载后解压`Ninja.exe`到某个地方方便寻找即可，这里以`D:\AsepriteDependencies`为例
 
+```tree
+D:\AsepriteDependencies
+└─Ninja.exe
+```
+
 ### 1.3 Skia ###
 
 - 这里需要下载Aseprite魔改后的Skia库：[https://github.com/aseprite/skia](https://github.com/aseprite/skia)
@@ -92,6 +130,15 @@ To compile Aseprite you will need:
 - 下载`Skia-Windows-Release-x64.zip`文件，地址：[![](https://img.shields.io/github/downloads/aseprite/skia/latest/total)](https://github.com/aseprite/skia/releases)
 
 - 下载后解压到一个空的文件夹中即可，这里以`D:\AsepriteDependencies\Skia`为例
+
+```tree
+D:\AsepriteDependencies\Skia
+├─include
+├─modules
+├─out
+├─src
+└─third_party
+```
 
 ### 1.4 Visual Studio ###
 
@@ -166,6 +213,12 @@ pause
 - 可以愉快的玩耍了
 
 ![pic_aseprite]
+
+-----
+
+更新日志：
+
+2022/07/07：添加解压后的目录结构
 
 [//]: ##############################分割线以下是图片区域###################################
 
