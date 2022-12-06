@@ -1,9 +1,11 @@
 ---
-title: 牌手预演「七圣召唤」
+title: 牌手预演「七圣召唤」 国际服
 date: 2022-12-06 14:40:27
 tags: 原神
 ---
-[活动页面 【原神】牌手预演-参与「七圣召唤」卡牌先览活动获得原石等奖励！](https://webstatic.mihoyo.com/ys/event/e20221205-card-cnhdui/index.html)
+
+原神国际服网页活动：
+> [活动页面 【原神】牌手预演-参与「七圣召唤」卡牌先览活动获得原石等奖励！](https://act.hoyoverse.com/ys/event/e20221205-card-cnhdui/index.html)
 
 ## 文字版本 ##
 
