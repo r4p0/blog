@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>Singleton - Unify Community Wiki | R4P0&#39;s Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Singleton From Singleton - Unify Community Wiki (archive.org)  [TOC] AlternativesScriptable ObjectsOne excellent alternative to the singleton pattern in Unity is the use of ScriptableObjects as a type">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Singleton - Unify Community Wiki">
+<meta property="og:url" content="https://r4p0.github.io/blog/2023/01/05/singleton_unify_community_wiki/index.html">
+<meta property="og:site_name" content="R4P0&#39;s Blog">
+<meta property="og:description" content="Singleton From Singleton - Unify Community Wiki (archive.org)  [TOC] AlternativesScriptable ObjectsOne excellent alternative to the singleton pattern in Unity is the use of ScriptableObjects as a type">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2023-01-05T06:11:02.000Z">
+<meta property="article:modified_time" content="2023-01-05T07:01:53.717Z">
+<meta property="article:author" content="R4P0">
+<meta property="article:tag" content="Unity">
+<meta property="article:tag" content="Singleton">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/blog/atom.xml" title="R4P0&#39;s Blog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/blog/css/style.css">
+
+<meta name="generator" content="Hexo 5.4.2"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/blog/" id="logo">R4P0&#39;s Blog</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/blog/" id="subtitle">This a subtitle</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/blog/">Home</a>
+        
+          <a class="main-nav-link" href="/blog/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/blog/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://r4p0.github.io/blog"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-singleton_unify_community_wiki" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/2023/01/05/singleton_unify_community_wiki/" class="article-date">
+  <time datetime="2023-01-05T06:11:02.000Z" itemprop="datePublished">2023-01-05</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/blog/categories/Unify-Community-Wiki/">Unify Community Wiki</a>►<a class="article-category-link" href="/blog/categories/Unify-Community-Wiki/C-Sharp/">C Sharp</a>►<a class="article-category-link" href="/blog/categories/Unify-Community-Wiki/Design-Patterns/">Design Patterns</a>►<a class="article-category-link" href="/blog/categories/Unify-Community-Wiki/MonoBehaviour/">MonoBehaviour</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Singleton - Unify Community Wiki
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Singleton"><a href="#Singleton" class="headerlink" title="Singleton"></a>Singleton</h1><blockquote>
+<p>From <a target="_blank" rel="noopener" href="http://web.archive.org/web/20201112042127/http://wiki.unity3d.com/index.php/Singleton">Singleton - Unify Community Wiki (archive.org)</a></p>
+</blockquote>
+<p>[TOC]</p>
+<h2 id="Alternatives"><a href="#Alternatives" class="headerlink" title="Alternatives"></a>Alternatives</h2><h4 id="Scriptable-Objects"><a href="#Scriptable-Objects" class="headerlink" title="Scriptable Objects"></a>Scriptable Objects</h4><p>One excellent alternative to the singleton pattern in Unity is the use of ScriptableObjects as a type of global variable. Ryan Hipple from Schell Games gave a presentation at Unite Austin 2017 titled <a target="_blank" rel="noopener" href="https://youtu.be/raQ3iHhE_Kk">Game Architecture with Scriptable Objects</a> that explains how to implement them and the many advantages over singletons.</p>
+<h4 id="Toolbox"><a href="#Toolbox" class="headerlink" title="Toolbox"></a>Toolbox</h4><p>The “<a target="_blank" rel="noopener" href="http://wiki.unity3d.com/index.php/Toolbox" title="Toolbox">Toolbox</a>“ concept improves upon the singleton pattern further by offering a different approach that makes them more modular and improves testability.</p>
+<h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><p>The <a target="_blank" rel="noopener" href="http://en.wikipedia.org/wiki/Singleton_pattern">singleton</a> pattern is a way to ensure a class has only a single globally accessible instance available at all times. Behaving much like a regular static class but with some advantages. This is very useful for making global manager type classes that hold global variables and functions that many other classes need to access. However, the convenience of the pattern can easily lead to misuse and abuse and this has made it <a target="_blank" rel="noopener" href="https://softwareengineering.stackexchange.com/questions/40373/so-singletons-are-bad-then-what/218322#218322">somewhat controversial</a> with many critics considered it an anti-pattern that should be avoided. But like any design pattern, singletons can be very useful in certain situations and it’s ultimately up to the developer to decide if it’s right for them.</p>
+<h4 id="Advantages"><a href="#Advantages" class="headerlink" title="Advantages"></a>Advantages</h4><ul>
+<li>Globally accessible. No need to search for or maintain a reference to the class.</li>
+<li>Persistent data. Can be used to maintain data across scenes.</li>
+<li>Supports interfaces. Static classes can not implement interfaces.</li>
+<li>Supports inheritance. Static classes can not inherent for another class.</li>
+</ul>
+<p>The advantage of using singletons in Unity, rather than static parameters and methods, is that static classes are lazy-loaded when they are first referenced, but must have an empty static constructor (or one is generated for you). This means it’s easier to mess up and break code if you’re not careful and know what you’re doing. As for using the Singleton Pattern, you automatically already do lots of neat stuff, such as creating them with a static initialization method and making them immutable.</p>
+<h4 id="Disadvantages"><a href="#Disadvantages" class="headerlink" title="Disadvantages"></a>Disadvantages</h4><ul>
+<li>Must use the <em><strong>Instance</strong></em> keyword (e.g. <ClassName>.Instance) to access the singleton class.</li>
+<li>There can only ever be one instance of the class active at a time.</li>
+<li>Tight connections. Modifying the singleton can easily break all other code that depends on it. Requiring a lot of refactoring.</li>
+<li>No polymorphism.</li>
+<li>Not very testable.</li>
+</ul>
+<h2 id="Implementation"><a href="#Implementation" class="headerlink" title="Implementation"></a>Implementation</h2><p>The singleton pattern is commonly applied to multiple classes but the implementation is always the same. So creating a singleton base class others can inherit from is ideal because it eliminates the need to recreate the same code over and over again for each class that needs to be a singleton.</p>
+<h4 id="Notes"><a href="#Notes" class="headerlink" title="Notes:"></a>Notes:</h4><ul>
+<li>This script will not prevent non singleton constructors from being used in your derived classes. To prevent this, add a protected constructor to each derived class.</li>
+<li>When Unity quits it destroys objects in a random order and this can create issues for singletons. So we prevent access to the singleton instance when the application quits to prevent problems.</li>
+</ul>
+<h3 id="Singleton-cs"><a href="#Singleton-cs" class="headerlink" title="Singleton.cs"></a>Singleton.cs</h3><figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">using</span> UnityEngine;</span><br><span class="line"></span><br><span class="line"><span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;summary&gt;</span></span></span><br><span class="line"><span class="comment"><span class="doctag">///</span> Inherit from this base class to create a singleton.</span></span><br><span class="line"><span class="comment"><span class="doctag">///</span> e.g. public class MyClassName : Singleton<span class="doctag">&lt;MyClassName&gt;</span> &#123;&#125;</span></span><br><span class="line"><span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;/summary&gt;</span></span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">Singleton</span>&lt;<span class="title">T</span>&gt; : <span class="title">MonoBehaviour</span> <span class="keyword">where</span> <span class="title">T</span> : <span class="title">MonoBehaviour</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment">// Check to see if we&#x27;re about to be destroyed.</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="built_in">bool</span> m_ShuttingDown = <span class="literal">false</span>;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="built_in">object</span> m_Lock = <span class="keyword">new</span> <span class="built_in">object</span>();</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> T m_Instance;</span><br><span class="line"></span><br><span class="line">    <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;summary&gt;</span></span></span><br><span class="line">    <span class="comment"><span class="doctag">///</span> Access singleton instance through this propriety.</span></span><br><span class="line">    <span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;/summary&gt;</span></span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> T Instance</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">get</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span> (m_ShuttingDown)</span><br><span class="line">            &#123;</span><br><span class="line">                Debug.LogWarning(<span class="string">&quot;[Singleton] Instance &#x27;&quot;</span> + <span class="keyword">typeof</span>(T) +</span><br><span class="line">                    <span class="string">&quot;&#x27; already destroyed. Returning null.&quot;</span>);</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">null</span>;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">lock</span> (m_Lock)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">if</span> (m_Instance == <span class="literal">null</span>)</span><br><span class="line">                &#123;</span><br><span class="line">                    <span class="comment">// Search for existing instance.</span></span><br><span class="line">                    m_Instance = (T)FindObjectOfType(<span class="keyword">typeof</span>(T));</span><br><span class="line"></span><br><span class="line">                    <span class="comment">// Create new instance if one doesn&#x27;t already exist.</span></span><br><span class="line">                    <span class="keyword">if</span> (m_Instance == <span class="literal">null</span>)</span><br><span class="line">                    &#123;</span><br><span class="line">                        <span class="comment">// Need to create a new GameObject to attach the singleton to.</span></span><br><span class="line">                        <span class="keyword">var</span> singletonObject = <span class="keyword">new</span> GameObject();</span><br><span class="line">                        m_Instance = singletonObject.AddComponent&lt;T&gt;();</span><br><span class="line">                        singletonObject.name = <span class="keyword">typeof</span>(T).ToString() + <span class="string">&quot; (Singleton)&quot;</span>;</span><br><span class="line"></span><br><span class="line">                        <span class="comment">// Make instance persistent.</span></span><br><span class="line">                        DontDestroyOnLoad(singletonObject);</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line"></span><br><span class="line">                <span class="keyword">return</span> m_Instance;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">OnApplicationQuit</span>()</span></span><br><span class="line">    &#123;</span><br><span class="line">        m_ShuttingDown = <span class="literal">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">OnDestroy</span>()</span></span><br><span class="line">    &#123;</span><br><span class="line">        m_ShuttingDown = <span class="literal">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="Requirements"><a href="#Requirements" class="headerlink" title="Requirements"></a>Requirements</h2><p>The above script makes use of the custom extension method <a target="_blank" rel="noopener" href="http://wiki.unity3d.com/index.php/GetOrAddComponent" title="GetOrAddComponent">GetOrAddComponent</a> which is not a part of Unity.</p>
+<h2 id="Usage"><a href="#Usage" class="headerlink" title="Usage"></a>Usage</h2><p>To make any class a singleton, simply inherit from the Singleton base class instead of MonoBehaviour, like so:</p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">MySingleton</span> : <span class="title">Singleton</span>&lt;<span class="title">MySingleton</span>&gt;</span><br><span class="line">&#123;</span><br><span class="line">    <span class="comment">// (Optional) Prevent non-singleton constructor use.</span></span><br><span class="line">    <span class="function"><span class="keyword">protected</span> <span class="title">MySingleton</span>()</span> &#123; &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// Then add whatever code to the class you need as you normally would.</span></span><br><span class="line">    <span class="keyword">public</span> <span class="built_in">string</span> MyTestString = <span class="string">&quot;Hello world!&quot;</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>Now you can access all public fields, properties and methods from the class anywhere using <strong>&lt;ClassName&gt;.Instance</strong>:</p>
+<figure class="highlight c#"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">MyClass</span> : <span class="title">MonoBehaviour</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">OnEnable</span>()</span></span><br><span class="line">    &#123;</span><br><span class="line">        Debug.Log(MySingleton.Instance.MyTestString);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>Categories: </p>
+<ul>
+<li><a target="_blank" rel="noopener" href="http://wiki.unity3d.com/index.php/Category:C_Sharp" title="Category:C Sharp">C Sharp</a></li>
+<li><a target="_blank" rel="noopener" href="http://wiki.unity3d.com/index.php/Category:MonoBehaviour" title="Category:MonoBehaviour">MonoBehaviour</a></li>
+<li><a target="_blank" rel="noopener" href="http://wiki.unity3d.com/index.php/Category:Design_Patterns" title="Category:Design Patterns">Design Patterns</a></li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://r4p0.github.io/blog/2023/01/05/singleton_unify_community_wiki/" data-id="clciqqj9b0009d3owh5ucgo88" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Singleton/" rel="tag">Singleton</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Unity/" rel="tag">Unity</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/blog/2022/12/06/Genius_Invokation_TCG/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">牌手预演「七圣召唤」 国际服</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/blog/categories/Unify-Community-Wiki/">Unify Community Wiki</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/categories/Unify-Community-Wiki/C-Sharp/">C Sharp</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/categories/Unify-Community-Wiki/Design-Patterns/">Design Patterns</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/categories/Unify-Community-Wiki/MonoBehaviour/">MonoBehaviour</a></li></ul></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Aseprite/" rel="tag">Aseprite</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/PhotoShop/" rel="tag">PhotoShop</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/PixelArt/" rel="tag">PixelArt</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Singleton/" rel="tag">Singleton</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Unity/" rel="tag">Unity</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Unity-Shader/" rel="tag">Unity Shader</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/%E5%83%8F%E7%B4%A0%E7%94%BB/" rel="tag">像素画</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/%E5%8E%9F%E7%A5%9E/" rel="tag">原神</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/%E6%B7%B7%E5%90%88%E6%A8%A1%E5%BC%8F/" rel="tag">混合模式</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/%E7%AE%97%E6%B3%95/" rel="tag">算法</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget tagcloud">
+      <a href="/blog/tags/Aseprite/" style="font-size: 10px;">Aseprite</a> <a href="/blog/tags/PhotoShop/" style="font-size: 10px;">PhotoShop</a> <a href="/blog/tags/PixelArt/" style="font-size: 10px;">PixelArt</a> <a href="/blog/tags/Singleton/" style="font-size: 10px;">Singleton</a> <a href="/blog/tags/Unity/" style="font-size: 10px;">Unity</a> <a href="/blog/tags/Unity-Shader/" style="font-size: 10px;">Unity Shader</a> <a href="/blog/tags/%E5%83%8F%E7%B4%A0%E7%94%BB/" style="font-size: 10px;">像素画</a> <a href="/blog/tags/%E5%8E%9F%E7%A5%9E/" style="font-size: 20px;">原神</a> <a href="/blog/tags/%E6%B7%B7%E5%90%88%E6%A8%A1%E5%BC%8F/" style="font-size: 10px;">混合模式</a> <a href="/blog/tags/%E7%AE%97%E6%B3%95/" style="font-size: 10px;">算法</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2023/01/">一月 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2022/12/">十二月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2022/06/">六月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2018/11/">十一月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2017/11/">十一月 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/1970/01/">一月 1970</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/blog/2023/01/05/singleton_unify_community_wiki/">Singleton - Unify Community Wiki</a>
+          </li>
+        
+          <li>
+            <a href="/blog/2022/12/06/Genius_Invokation_TCG/">牌手预演「七圣召唤」 国际服</a>
+          </li>
+        
+          <li>
+            <a href="/blog/2022/12/05/Genshin_Impact_Seven/">牌手预演「七圣召唤」</a>
+          </li>
+        
+          <li>
+            <a href="/blog/2022/06/22/build_aseprite_from_github/">Aseprite 白嫖编译指南</a>
+          </li>
+        
+          <li>
+            <a href="/blog/2018/11/20/ps_mixed_model/">【叠加模式】Photoshop图层混合模式的计算公式</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2023 R4P0<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/blog/" class="mobile-nav-link">Home</a>
+  
+    <a href="/blog/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/blog/fancybox/jquery.fancybox.css">
+
+  
+<script src="/blog/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/blog/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>
