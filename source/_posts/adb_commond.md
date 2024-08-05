@@ -1,7 +1,9 @@
 ---
 title: adb 命令笔记
 date: 2024-08-05 10:09:42
-tags:
+tags: 
+- adb
+- shell
 ---
 
 ## adb 命令
