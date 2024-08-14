@@ -1,9 +1,11 @@
 ---
 title: adb 命令笔记
 date: 2024-08-05 10:09:42
+updated: 2024-08-14 15:29:53
 tags: 
 - adb
 - shell
+comments: true
 ---
 
 ## adb 命令
@@ -13,6 +15,15 @@ tags:
 $ adb devices
 List of devices attached
 emulator-5558   device
+```
+
+- adb pair {ip}:{port}
+配对指定ip和端口的adb设备，使用connect前需要先执行pair
+手机端需要打开 开发者选项 / 无线调试 / 使用配对码配对设备
+```shell
+$ adb pair 172.16.12.140:38617
+Enter pairing code: ******
+Successfully paired to 172.16.12.140:38617 [guid=adb-********-******]
 ```
 
 - adb connect {ip}:{port}
