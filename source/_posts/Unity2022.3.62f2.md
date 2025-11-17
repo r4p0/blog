@@ -18,6 +18,8 @@ tags:
 
 ### Other installs
 
+<!--more-->
+
 | Name | Download | URL |
 | --- | --- | --- |
 | Download Assistant (Windows) | [⬇](https://download.unity3d.com/download_unity/7670c08855a9/UnityDownloadAssistant-2022.3.62f2.exe) | https://download.unity3d.com/download_unity/7670c08855a9/UnityDownloadAssistant-2022.3.62f2.exe |

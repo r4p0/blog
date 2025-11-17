@@ -19,6 +19,8 @@ tags:
 
 [原图](https://images.cgspread.com/qiniu/3551/image/e3a3fbbb7c52e1a53c2ef46c34edabe3.jpg)
 
+<!--more-->
+
 ## 注释： ##
 
 1. 混合模式的数学计算公式，另外还介绍了不透明度。  

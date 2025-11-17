@@ -15,6 +15,8 @@ Unity中Shader表面着色器基础
 
 Unity中的==Surface Shaders==是一种比使用底层的顶点/像素着色器程序（vertex/pixel shader programs）写起来更为简单通用的方式。 surfaceShaders 也是用Cg/hlsl来写。
 
+<!--more-->
+
 ## How It Works ##
 
 首先你需要定义一个"Surface"函数来获取任何uv信息或者你需要的数据作为输入，最后会填充在输出结构体"SurfaceOutput"里，SurfaceOutput是对表面属性的基本描述(例如Albedo,Normal,Emission,Specular等等)，你可以将这些代码写在cg/hlsl里。

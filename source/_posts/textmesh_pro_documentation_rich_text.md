@@ -54,6 +54,8 @@ Tags plus their attributes can be up to 128 characters long. This limitation sho
 | [voffset](#voffset) | Baseline offset. |
 | [width](#width) | Text width. |
 
+<!--more-->
+
 <section id="align">
 
 ## Text Alignment

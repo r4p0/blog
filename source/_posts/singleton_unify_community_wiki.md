@@ -25,6 +25,8 @@ One excellent alternative to the singleton pattern in Unity is the use of Script
 
 The "[Toolbox](http://wiki.unity3d.com/index.php/Toolbox "Toolbox")" concept improves upon the singleton pattern further by offering a different approach that makes them more modular and improves testability.
 
+<!--more-->
+
 ## Introduction
 
 The [singleton](http://en.wikipedia.org/wiki/Singleton_pattern) pattern is a way to ensure a class has only a single globally accessible instance available at all times. Behaving much like a regular static class but with some advantages. This is very useful for making global manager type classes that hold global variables and functions that many other classes need to access. However, the convenience of the pattern can easily lead to misuse and abuse and this has made it [somewhat controversial](https://softwareengineering.stackexchange.com/questions/40373/so-singletons-are-bad-then-what/218322#218322) with many critics considered it an anti-pattern that should be avoided. But like any design pattern, singletons can be very useful in certain situations and it's ultimately up to the developer to decide if it's right for them.

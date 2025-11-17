@@ -40,6 +40,8 @@ $ adb disconnect
 disconnected everything
 ```
 
+<!--more-->
+
 - adb -s {device id} {adb commond}
 指定要操作的adb设备
 
