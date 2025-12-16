@@ -5,8 +5,6 @@ tags:
 - bat
 - exif
 ---
-# BAT 脚本：根据 EXIF 信息分类照片
-
 本脚本会扫描当前目录下的 JPG/HEIF 照片，根据 EXIF 信息将它们分类到不同的目录：
 
 ```bat
@@ -59,6 +57,8 @@ for %%f in (*) do (
 echo 文件分类完成!
 pause
 ```
+
+<!--more-->
 
 ## 脚本说明
 
